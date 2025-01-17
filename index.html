@@ -30,8 +30,8 @@
             position: relative;
             width: 90%;
             max-width: 400px;
-            height: 50vw;
-            max-height: 250px;
+            height: auto;
+            aspect-ratio: 1; /* Maintain aspect ratio */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -213,7 +213,8 @@
         @media (max-width: 1024px) {
             .container {
                 width: 85%;
-                height: 45vw;
+                height: auto;
+                aspect-ratio: 1; /* Maintain aspect ratio */
                 max-height: 240px;
             }
 
@@ -238,7 +239,8 @@
         @media (max-width: 768px) {
             .container {
                 width: 90%;
-                height: 60vw;
+                height: auto;
+                aspect-ratio: 1; /* Maintain aspect ratio */
                 max-height: 300px;
             }
 
@@ -263,7 +265,8 @@
         @media (max-width: 480px) {
             .container {
                 width: 95%;
-                height: 70vw;
+                height: auto;
+                aspect-ratio: 1; /* Maintain aspect ratio */
                 max-height: 320px;
             }
 
