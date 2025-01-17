@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Sweetie</title>
+    <link rel="icon" href="img/heart.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            background: #ff85ac;
+            font-family: 'Pangolin', cursive;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            width: 90%;
+            max-width: 500px;
+            height: 60vw;
+            max-height: 320px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .envelope {
+            position: relative;
+            background: #eb7885;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.5s ease;
+        }
+
+        .card {
+            position: absolute;
+            background: white;
+            height: 40vw;
+            max-height: 250px;
+            width: 90%;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            left: 5%;
+            top: 10%;
+            z-index: 2;
+            transform: translateY(0);
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+
+        .message {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #333;
+            padding: 10px;
+        }
+
+        .cover {
+            position: absolute;
+            height: 0;
+            width: 0;
+            border-bottom: 20vw solid #f5b5bb; /* Smaller top side */
+            border-left: 40vw solid transparent;
+            border-right: 40vw solid transparent;
+            top: 20vw; /* Adjusted top to keep it in position */
+            z-index: 3;
+            transition: all 0.5s ease;
+        }
+
+        .lid {
+            position: absolute;
+            height: 0;
+            width: 0;
+            border-top: 20vw solid #ff8896; /* Smaller top side */
+            border-left: 40vw solid transparent;
+            border-right: 40vw solid transparent;
+            top: 0;
+            transform-origin: top;
+            transition: all 0.5s ease;
+        }
+
+        .container:hover .lid {
+            transform: rotateX(180deg);
+        }
+
+        .container:hover .card {
+            opacity: 1;
+            transform: translateY(-10px);
+        }
+
+        .shadow {
+            position: absolute;
+            top: 3vmin;
+            border-radius: 50%;
+            opacity: 0.7;
+            height: 2vmin;
+            width: 80%;
+            max-width: 480px;
+            background: #e8c5d0;
+        }
+
+        .heart {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .heart:before,
+        .heart:after {
+            position: absolute;
+            content: "";
+            left: 18px;
+            top: 0px;
+            width: 18px;
+            height: 30px;
+            background: #E72650;
+            border-radius: 30px 30px 0 0;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+
+        .heart:after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+
+        .one {
+            transform: scale(0.8);
+            opacity: 0.6;
+            animation: up 15s linear infinite, side 6s ease-in-out infinite alternate;
+        }
+
+        .two {
+            transform: scale(0.6);
+            opacity: 0.9;
+            animation: up 25s linear infinite, side 5s ease-in-out infinite alternate;
+        }
+
+        .three {
+            transform: scale(0.8);
+            opacity: 0.8;
+            animation: up 20s linear infinite, side 4s ease-in-out infinite alternate;
+        }
+
+        .four {
+            transform: scale(0.7);
+            opacity: 0.9;
+            animation: up 18s linear infinite, side 2s ease-in-out infinite alternate;
+        }
+
+        .five {
+            transform: scale(0.6);
+            opacity: 0.3;
+            animation: up 7s linear infinite, side 1s ease-in-out infinite alternate;
+        }
+
+        .six {
+            opacity: 0.8;
+            animation: up 10s linear infinite, side 7s ease-in-out infinite alternate;
+        }
+
+        @keyframes up {
+            0% {
+                top: 300px;
+            }
+
+            100% {
+                top: -500px;
+            }
+        }
+
+        @keyframes side {
+            0% {
+                margin-left: 0px;
+            }
+
+            100% {
+                margin-left: 50px;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .container {
+                width: 85%;
+                height: 55vw;
+                max-height: 280px;
+            }
+
+            .card {
+                height: 45vw;
+                max-height: 240px;
+            }
+
+            .cover {
+                border-bottom: 20vw solid #f5b5bb; /* Smaller top side */
+                border-left: 40vw solid transparent;
+                border-right: 40vw solid transparent;
+            }
+
+            .lid {
+                border-top: 40vw solid #ff8896; /* Smaller top side */
+                border-left: 40vw solid transparent;
+                border-right: 40vw solid transparent;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                height: 70vw;
+                max-height: 320px;
+            }
+
+            .card {
+                height: 50vw;
+                max-height: 270px;
+            }
+
+            .cover {
+                border-bottom: 20vw solid #f5b5bb; /* Smaller top side */
+                border-left: 45vw solid transparent;
+                border-right: 45vw solid transparent;
+            }
+
+            .lid {
+                border-top: 20vw solid #ff8896; /* Smaller top side */
+                border-left: 45vw solid transparent;
+                border-right: 45vw solid transparent;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 95%;
+                height: 80vw;
+                max-height: 350px;
+            }
+
+            .card {
+                height: 60vw;
+                max-height: 300px;
+            }
+
+            .cover {
+                border-bottom: 25vw solid #f5b5bb; /* Smaller top side */
+                border-left: 48vw solid transparent;
+                border-right: 48vw solid transparent;
+            }
+
+            .lid {
+                border-top: 100vw solid #ff8896; /* Smaller top side */
+                border-left: 48vw solid transparent;
+                border-right: 48vw solid transparent;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="c"></canvas>
+    <div class="container">
+        <div class="envelope">
+            <div class="cover"></div>
+            <div class="lid"></div>
+        </div>
+        <div class="card">
+            <h1 class="message">Happy Birthday Shamaim <br> Happiest Birthday to the most beautiful woman. The most beautiful woman I met. Allah tmahra har dream pora kry or lambi zindagi ata kry. Uncle aunty ko aj aik hassen phool mila tha and now she's with meh. I want you to be with me forever. Parents are proud of you. Happy birthday <br> <a href="#">Iloveuh💙</a>
+            </h1>
+        </div>
+        <div class="shadow"></div>
+    </div>
+    <div class='heart one'></div>
+    <div class='heart two'></div>
+    <div class='heart three'></div>
+    <div class='heart four'></div>
+    <div class='heart five'></div>
+    <div class='heart six'></div>
+</body>
+
+</html>
