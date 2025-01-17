@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Sweetie</title>
+    <link rel="icon" href="img/heart.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #ff85ac;
+            font-family: 'Pangolin', cursive;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            width: 80vmin;
+            height: auto;
+        }
+
+        .envelope {
+            background: #eb7885;
+            height: 50%;
+            width: 100%;
+        }
+
+        .card {
+            position: absolute;
+            background: white;
+            width: 90%;
+            height: 40%;
+            left: 5%;
+            top: 10%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            animation: slide-rev 0.2s ease-out;
+        }
+
+        .message {
+            padding: 2vmin;
+            font-size: 3vmin;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: #e72650;
+            font-size: 3.5vmin;
+            margin-top: 1vmin;
+            display: block;
+        }
+
+        .cover,
+        .lid,
+        .shadow {
+            position: absolute;
+            width: 0;
+            height: 0;
+        }
+
+        .lid {
+            border-top: 25% solid #ff8896;
+            border-left: 50% solid transparent;
+            border-right: 50% solid transparent;
+            top: 0;
+            transform-origin: top;
+            animation: open-rev 2s;
+        }
+
+        .container:hover .lid {
+            animation: open 0.5s;
+            animation-fill-mode: forwards;
+        }
+
+        .container:hover .card {
+            animation: slide 0.2s;
+            animation-delay: 0.5s;
+            animation-fill-mode: forwards;
+        }
+
+        .heart {
+            position: absolute;
+            width: 5vmin;
+            height: 5vmin;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .heart:before,
+        .heart:after {
+            content: "";
+            position: absolute;
+            width: 50%;
+            height: 75%;
+            background: #E72650;
+            border-radius: 50%;
+        }
+
+        .heart:before {
+            left: 50%;
+            transform: translateX(-100%) rotate(-45deg);
+        }
+
+        .heart:after {
+            top: 50%;
+            transform: translateY(-100%) rotate(45deg);
+        }
+
+        @keyframes open {
+            100% {
+                transform: rotatex(180deg);
+            }
+        }
+
+        @keyframes slide {
+            100% {
+                transform: translateY(-15%);
+            }
+        }
+
+        @keyframes open-rev {
+            from {
+                transform: rotatex(-180deg);
+            }
+        }
+
+        @keyframes slide-rev {
+            from {
+                transform: translateY(-15%);
+            }
+        }
+
+        @media (max-width: 600px) {
+            body {
+                font-size: 1.5vmin;
+            }
+
+            .message {
+                font-size: 2.5vmin;
+            }
+
+            a {
+                font-size: 3vmin;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="envelope"></div>
+        <div class="card">
+            <h1 class="message">
+                Happy Birthday Shamaim<br>
+                Happy Birthday to the most beautiful woman! You are so cute, caring, loving, and gorgeous. You mean
+                everything to me. Thank you for being in my life! ❤️
+                <a href="#">I Love You</a>
+            </h1>
+        </div>
+        <div class="lid"></div>
+    </div>
+</body>
+
+</html>
