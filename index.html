@@ -31,11 +31,16 @@
             width: 90%;
             max-width: 400px;
             height: auto;
-            aspect-ratio: 1; /* Maintain aspect ratio */
+            aspect-ratio: 1;
             display: flex;
             justify-content: center;
             align-items: center;
             overflow: hidden;
+            margin: 0 auto; /* Center horizontally */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Center vertically */
         }
 
         .envelope {
@@ -69,6 +74,10 @@
             transform: translateY(0);
             opacity: 0;
             transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Center the card */
         }
 
         .message {
@@ -82,10 +91,10 @@
             position: absolute;
             height: 0;
             width: 0;
-            border-bottom: 18vw solid #f5b5bb; /* Smaller top side */
+            border-bottom: 18vw solid #f5b5bb;
             border-left: 36vw solid transparent;
             border-right: 36vw solid transparent;
-            top: 18vw; /* Adjusted top to keep it in position */
+            top: 18vw;
             z-index: 3;
             transition: all 0.5s ease;
         }
@@ -94,7 +103,7 @@
             position: absolute;
             height: 0;
             width: 0;
-            border-top: 18vw solid #ff8896; /* Smaller top side */
+            border-top: 18vw solid #ff8896;
             border-left: 36vw solid transparent;
             border-right: 36vw solid transparent;
             top: 0;
@@ -214,7 +223,7 @@
             .container {
                 width: 85%;
                 height: auto;
-                aspect-ratio: 1; /* Maintain aspect ratio */
+                aspect-ratio: 1;
                 max-height: 240px;
             }
 
@@ -240,7 +249,7 @@
             .container {
                 width: 90%;
                 height: auto;
-                aspect-ratio: 1; /* Maintain aspect ratio */
+                aspect-ratio: 1;
                 max-height: 300px;
             }
 
@@ -266,7 +275,7 @@
             .container {
                 width: 95%;
                 height: auto;
-                aspect-ratio: 1; /* Maintain aspect ratio */
+                aspect-ratio: 1;
                 max-height: 320px;
             }
 
