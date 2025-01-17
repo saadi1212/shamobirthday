@@ -29,9 +29,9 @@
         .container {
             position: relative;
             width: 90%;
-            max-width: 500px;
-            height: 60vw;
-            max-height: 320px;
+            max-width: 400px;
+            height: 50vw;
+            max-height: 250px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -54,8 +54,8 @@
         .card {
             position: absolute;
             background: white;
-            height: 40vw;
-            max-height: 250px;
+            height: 35vw;
+            max-height: 200px;
             width: 90%;
             padding: 10px;
             display: flex;
@@ -82,10 +82,10 @@
             position: absolute;
             height: 0;
             width: 0;
-            border-bottom: 20vw solid #f5b5bb; /* Smaller top side */
-            border-left: 40vw solid transparent;
-            border-right: 40vw solid transparent;
-            top: 20vw; /* Adjusted top to keep it in position */
+            border-bottom: 18vw solid #f5b5bb; /* Smaller top side */
+            border-left: 36vw solid transparent;
+            border-right: 36vw solid transparent;
+            top: 18vw; /* Adjusted top to keep it in position */
             z-index: 3;
             transition: all 0.5s ease;
         }
@@ -94,9 +94,9 @@
             position: absolute;
             height: 0;
             width: 0;
-            border-top: 20vw solid #ff8896; /* Smaller top side */
-            border-left: 40vw solid transparent;
-            border-right: 40vw solid transparent;
+            border-top: 18vw solid #ff8896; /* Smaller top side */
+            border-left: 36vw solid transparent;
+            border-right: 36vw solid transparent;
             top: 0;
             transform-origin: top;
             transition: all 0.5s ease;
@@ -118,7 +118,7 @@
             opacity: 0.7;
             height: 2vmin;
             width: 80%;
-            max-width: 480px;
+            max-width: 400px;
             background: #e8c5d0;
         }
 
@@ -213,75 +213,75 @@
         @media (max-width: 1024px) {
             .container {
                 width: 85%;
-                height: 55vw;
-                max-height: 280px;
-            }
-
-            .card {
                 height: 45vw;
                 max-height: 240px;
             }
 
+            .card {
+                height: 40vw;
+                max-height: 200px;
+            }
+
             .cover {
-                border-bottom: 20vw solid #f5b5bb; /* Smaller top side */
-                border-left: 40vw solid transparent;
-                border-right: 40vw solid transparent;
+                border-bottom: 18vw solid #f5b5bb;
+                border-left: 36vw solid transparent;
+                border-right: 36vw solid transparent;
             }
 
             .lid {
-                border-top: 40vw solid #ff8896; /* Smaller top side */
-                border-left: 40vw solid transparent;
-                border-right: 40vw solid transparent;
+                border-top: 18vw solid #ff8896;
+                border-left: 36vw solid transparent;
+                border-right: 36vw solid transparent;
             }
         }
 
         @media (max-width: 768px) {
             .container {
                 width: 90%;
-                height: 70vw;
-                max-height: 320px;
+                height: 60vw;
+                max-height: 300px;
             }
 
             .card {
                 height: 50vw;
-                max-height: 270px;
+                max-height: 250px;
             }
 
             .cover {
-                border-bottom: 20vw solid #f5b5bb; /* Smaller top side */
-                border-left: 45vw solid transparent;
-                border-right: 45vw solid transparent;
+                border-bottom: 20vw solid #f5b5bb;
+                border-left: 40vw solid transparent;
+                border-right: 40vw solid transparent;
             }
 
             .lid {
-                border-top: 20vw solid #ff8896; /* Smaller top side */
-                border-left: 45vw solid transparent;
-                border-right: 45vw solid transparent;
+                border-top: 20vw solid #ff8896;
+                border-left: 40vw solid transparent;
+                border-right: 40vw solid transparent;
             }
         }
 
         @media (max-width: 480px) {
             .container {
                 width: 95%;
-                height: 80vw;
-                max-height: 350px;
+                height: 70vw;
+                max-height: 320px;
             }
 
             .card {
-                height: 60vw;
-                max-height: 300px;
+                height: 55vw;
+                max-height: 280px;
             }
 
             .cover {
-                border-bottom: 25vw solid #f5b5bb; /* Smaller top side */
-                border-left: 48vw solid transparent;
-                border-right: 48vw solid transparent;
+                border-bottom: 22vw solid #f5b5bb;
+                border-left: 44vw solid transparent;
+                border-right: 44vw solid transparent;
             }
 
             .lid {
-                border-top: 100vw solid #ff8896; /* Smaller top side */
-                border-left: 48vw solid transparent;
-                border-right: 48vw solid transparent;
+                border-top: 22vw solid #ff8896;
+                border-left: 44vw solid transparent;
+                border-right: 44vw solid transparent;
             }
         }
     </style>
